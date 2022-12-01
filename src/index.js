@@ -1,17 +1,28 @@
 import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import ReactDom from 'react-dom';
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
-);
+import Greets from './components/Greets';
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+/*import First from './components/First'*/
+//import HelloWorld from './components/HelloWorld'
+
+/*ReactDom.render(<First />, document.getElementById('root'))*/
+
+//ReactDom.render(<HelloWorld name = "Jaqueline"  idade = {22}/>, document.getElementById('root'))
+
+/* import Multi, { BoaNoite } from './components/Multiples';
+
+ReactDom.render(
+    <div>
+        <Multi.BoaTarde name = "Jaqueline" />
+        <BoaNoite name="Antonio" />
+        <Multi.BomDia name = "Alice"></Multi.BomDia>
+    </div>,
+document.getElementById('root')) */
+
+ReactDom.render(
+    <div>
+        <Greets tipo="Olá!" name ="Alice!"/>
+    </div>,
+    document.getElementById('root')
+)
