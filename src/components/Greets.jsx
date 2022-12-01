@@ -6,6 +6,11 @@ state = {
     nome: "Escreva o nome"
 }
 
+constructor(props) {
+    super(props)
+    this.SetName = this.SetName.bind(this)
+}
+
 setTipo(e) {
     this.setState({tipo: e.target.value})
 }
@@ -21,7 +26,7 @@ SetName(e) {
             <h1>{nome}, {tipo}!</h1>
             <hr />
             <input type="text" placeholder="Tipo..." value={tipo} onChange={e => this.setTipo(e)}/>
-            <input type="text" placeholder="Nome..." value={nome} onChange={e => this.SetName(e)} />
+            <input type="text" placeholder="Nome..." value={nome} onChange={this.SetName} />
             </div>
         )
     }
